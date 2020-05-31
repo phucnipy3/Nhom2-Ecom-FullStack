@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Nhom2.Ecom.Data.Context;
+using Nhom2.Ecom.Data;
 
 namespace Nhom2.Ecom.WebApi
 {
@@ -30,6 +25,11 @@ namespace Nhom2.Ecom.WebApi
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
             services.AddControllers();
+            services.AddScoped<IBLUsers, BLUsers>();
+            services.AddScoped<IBLCategory, BLCategory>();
+            services.AddScoped<IBLBlog, BLBlog>();
+            services.AddScoped<IBLOrder, BLOrder>();
+            services.AddScoped<IBLProduct, BLProduct>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
