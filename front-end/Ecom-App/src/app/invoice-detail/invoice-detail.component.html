@@ -1,0 +1,80 @@
+<div class="ms-content-wrapper">
+    <div class="row">
+
+        <div class="col-md-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb pl-0">
+                    <li class="breadcrumb-item"><a href="#"><i class="material-icons">home</i> Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Invoice</li>
+                </ol>
+            </nav>
+
+            <div class="ms-panel">
+                <div class="ms-panel-header header-mini">
+                    <div class="d-flex justify-content-between">
+                        <h6>Invoice</h6>
+                        <h6>#{{invoiceId}}</h6>
+                    </div>
+                </div>
+
+                <div class="ms-panel-body">
+
+                    <!-- Invoice To -->
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="invoice-address">
+                                <h3>Reciever: </h3>
+                                <h5>{{receiver}}</h5>
+                                <p>{{emailOrderer}}</p>
+                                <p class="mb-0">{{invoiceAddress}}</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 text-md-right">
+                            <ul class="invoice-date">
+                                <li>Invoice Date : {{invoiceDate}}</li>
+                                <li>Due Date : {{dueDate}}}}</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Invoice Table -->
+                    <div class="ms-invoice-table table-responsive mt-5">
+                        <table class="table table-hover text-right thead-primary">
+                            <thead>
+                                <tr class="text-capitalize">
+                                    <th class="text-center w-5">#</th>
+                                    <th class="text-left">product Title</th>
+                                    <th>qty</th>
+                                    <th>Unit Cost</th>
+                                    <th>total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of lstProduct; let i = index">
+                                    <td class="text-center">{{i + 1}}</td>
+                                    <td class="text-left">{{product.productTitle}}</td>
+                                    <td>{{product.Qty}}</td>
+                                    <td>${{product.Price}}</td>
+                                    <td>${{product.Price * product.Qty}}</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4">Total Cost: </td>
+                                    <td>${{invoiceTotal}}</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="invoice-buttons text-right">
+                        <a href="#" class="btn btn-primary mr-2">Print Invoice</a>
+                        <a href="#" class="btn btn-primary">Send Invoice</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

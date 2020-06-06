@@ -1,0 +1,28 @@
+.box-show{
+    margin: 0 0 15px;
+}
+
+
+table .short{
+    display: inline-block;
+    margin-left: 3px;
+    position: relative;
+}
+
+table .short i{
+    cursor: pointer;
+    opacity: .5;
+}
+
+table .short i:nth-of-type(1){
+    position: absolute;
+}
+
+nav{
+    text-align: right;
+}
+
+.pagination-box{
+    display: inline-block;
+}
+

@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xl-2">
+            <div class="d-flex-between-center box-show">
+                <span>Show: </span>
+                <app-select-option (change)="ChangeAmountShow($event)"></app-select-option>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-responsive">
+    <table id="data-invoice" class="table table-striped thead-primary w-100">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th *ngFor = "let column of columns">
+                    {{column}}
+                    <div class="short">
+                        <i class="fa fa-sort-up" (click) = "Sort(column)"></i>
+                        <i class="fa fa-sort-down" (click) = "Sort(column)"></i>
+                    </div>
+                    
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr role="row" *ngFor="let data_row of GetDataShow(indexStart, indexStart + amountShow); let i = index">
+                <th>{{i + 1}}</th>
+                <td>{{data_row.id}}</td>
+                <td>{{data_row.CustomerReceiver}}</td>
+                <td>{{data_row.CreateDate}}</td>
+                <td>{{data_row.Qty}}</td>
+                <td>{{data_row.Price}}</td>
+                <td>
+                    <span  class="badge badge-primary">{{data_row.Status}}</span>
+                </td>
+                <td>
+                    <a href="invoice-detail.html" class="mr-3 ms-text-primary">
+                        <i class="fa fa-eye "></i>
+                    </a>
+                    <a type="button" name="button" class="btn-transparent trigger-swal" data-swal="multi-step">
+                        <i class="far fa-trash-alt ms-text-danger"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <app-pagination [amountPage] = "amountPage" (pageChange) = "PageChange($event)"></app-pagination>
+</div>
+
