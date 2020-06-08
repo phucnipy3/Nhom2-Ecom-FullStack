@@ -20,20 +20,30 @@
                 <div class="ms-panel-body">
 
                     <!-- Invoice To -->
-                    <div class="row align-items-center">
+                    <div class="row ">
                         <div class="col-md-6">
                             <div class="invoice-address">
-                                <h3>Reciever: </h3>
-                                <h5>{{receiver}}</h5>
-                                <p>{{emailOrderer}}</p>
-                                <p class="mb-0">{{invoiceAddress}}</p>
+                                <h5> <span class="label">Reciever:</span> {{receiver}}</h5>
+                                <p><span class="label">Phone Number: </span>{{receiverPhone}}</p>
+                                <p><span class="label">Email: </span>{{emailOrderer}}</p>
+                                <p class="mb-0"> <span class="label">Address: </span> {{invoiceAddress}}</p>
                             </div>
                         </div>
 
                         <div class="col-md-6 text-md-right">
                             <ul class="invoice-date">
-                                <li>Invoice Date : {{invoiceDate}}</li>
-                                <li>Due Date : {{dueDate}}}}</li>
+                                <li> <span class="label">Invoice Date :</span> {{invoiceDate}}</li>
+                                <li><span class="label">Due Date :</span> {{dueDate}}</li>
+                                <li class="invoice-status">
+                                    <span class="label">Invoice Status : </span> 
+                                    <span class="badge badge-pill" 
+                                        [class.badge-secondary]="invoiceStatusChange == 'Paid'" 
+                                        [class.badge-warning]="invoiceStatusChange == 'Transporting'"
+                                        [class.badge-danger]="invoiceStatusChange == 'Pending'"
+                                        (click)="ChangeInvoiceStatus()"
+                                    >{{invoiceStatusChange}}</span>
+                                </li>
+                                <li><span class="label">Invoice Total :</span> <b>${{invoicePrice}}</b></li>
                             </ul>
                         </div>
                     </div>
@@ -69,6 +79,7 @@
                     </div>
 
                     <div class="invoice-buttons text-right">
+                        <a href="#" class="btn btn-primary mr-2" *ngIf="isSave">Save Invoice</a>
                         <a href="#" class="btn btn-primary mr-2">Print Invoice</a>
                         <a href="#" class="btn btn-primary">Send Invoice</a>
                     </div>
