@@ -13,6 +13,8 @@ import { InvoiceListComponent } from './invoice-list/invoice-list.component';
 import { TableComponent } from './table/table.component';
 import { SelectOptionComponent } from './select-option/select-option.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { CommentComponent } from './comment/comment.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
 
 
@@ -29,6 +31,8 @@ import { PaginationComponent } from './pagination/pagination.component';
     TableComponent,
     SelectOptionComponent,
     PaginationComponent,
+    CommentComponent,
+    CommentListComponent,
     
   ],
   imports: [

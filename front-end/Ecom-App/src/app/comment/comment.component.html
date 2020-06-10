@@ -1,0 +1,35 @@
+
+<div class="review-box" [class.child-comment] = "isChild">
+    <div>
+        <div class="avatar-reviewer">
+            <span>{{FormatAvatarName()}}</span>
+        </div>
+        <div class="content-review">
+            <p>{{authorName}}</p>
+            <span>{{commentContent}}</span>
+        </div>
+    </div>
+    
+    <div class="info-review">
+        <ul>
+            <li>3 
+                <a href="#" title="comment">
+                    <i class="far fa-comments"></i>
+                </a>
+            </li>
+            <li>{{likeAmount}} 
+                <a href="#" title="like">
+                    <i class="far fa-thumbs-up" *ngIf = "!isLike" (click) = "ChangeLike()"></i>
+                    <i class="fa fa-thumbs-up" *ngIf = "isLike" (click) = "ChangeLike()"></i>
+                </a>
+            </li>
+            <li><a href="#" title="reply"><i class="fa fa-reply"></i></a></li>
+            <li><span>{{commentTime}}</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="child-review">
+    <app-comment isChild="true"></app-comment>
+</div>
+

@@ -1,0 +1,77 @@
+
+
+.avatar-reviewer{
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #808080;
+    text-align: center;
+}
+
+.avatar-reviewer span{
+    color: #808080;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 50px;
+}
+
+.content-review{
+    padding: 15px 15px;
+    border-radius: 25px;
+    background-color: #e0e0e0;
+    margin-left: 65px;
+}
+
+.content-review p{
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    counter-reset: #808080;
+}
+
+.content-review span{
+    color: #4c4848;
+}
+
+.info-review{
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.info-review ul li{
+    display: inline;
+    margin-right: 15px;
+}
+
+.info-review ul li span{
+    font-size: 13px;
+    color: #808080;
+}
+
+.info-review ul li a{
+    margin-left: 5px;
+    color: #45e345;
+}
+
+.child-comment{
+    margin-left: 30px;
+}
+
+
+.child-comment .avatar-reviewer{
+    height: 35px;
+    width: 35px;
+}
+
+.child-comment .avatar-reviewer span{
+    color: #808080;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.child-comment .content-review{
+    padding: 5px 15px;
+    margin-left: 50px;
+}
