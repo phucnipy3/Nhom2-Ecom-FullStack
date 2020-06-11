@@ -55,23 +55,27 @@
     color: #45e345;
 }
 
-.child-comment{
-    margin-left: 30px;
+:host{
+    display: block;
+}
+
+:host.child-comment{
+    margin-left: 60px;
 }
 
 
-.child-comment .avatar-reviewer{
+:host.child-comment .avatar-reviewer{
     height: 35px;
     width: 35px;
 }
 
-.child-comment .avatar-reviewer span{
+:host.child-comment .avatar-reviewer span{
     color: #808080;
     font-size: 20px;
     line-height: 35px;
 }
 
-.child-comment .content-review{
+:host.child-comment .content-review{
     padding: 5px 15px;
     margin-left: 50px;
 }

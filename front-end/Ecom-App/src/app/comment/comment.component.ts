@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-comment',
@@ -7,13 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CommentComponent implements OnInit {
   // Infor comment
+  @Input() id:number = 1;
   @Input() isChild:boolean = false;
+  @Input() parent:number = -1;
   @Input() isLike:boolean = false;
   @Input() likeAmount:number = 10;
   @Input() authorAvatar:string = "";
   @Input() authorName:string = "Tran Le Anh Vu"
   @Input() commentContent:string = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero, iure laborum placeat, non alias distinctio enim qui rem quod! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae vero, iure laborum placeat, non alias distinctio enim qui rem quod!";
   @Input() commentTime:string = "3 days ago";
+
+  @Output() public ShowComment = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
@@ -47,6 +51,10 @@ export class CommentComponent implements OnInit {
     }
     
     return avatarName;
+  }
+
+  ShowCommentChild(id){
+    this.ShowComment.emit(id);
   }
 
 }

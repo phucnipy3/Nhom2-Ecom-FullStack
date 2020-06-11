@@ -1,1 +1,19 @@
-<app-comment likeAmount="11"></app-comment>
+
+<ng-container *ngFor = "let comment of listComment">
+    <app-comment 
+        id = "{{comment.CommentId}}"
+        isChild = "{{comment.IsChild}}"
+        parent = "{{comment.CommentParent}}"
+        isLike = "{{comment.IsLike}}"
+        likeAmount = "{{comment.LikeAmount}}"
+        authorAvatar = "{{comment.AuthorAvatar}}"
+        authorName = "{{comment.AuthorName}}"
+        commentContent ="{{comment.CommentContent}}"
+        commentTime = "{{comment.CommentTime}}"
+
+        *ngIf="comment.IsShow"
+
+        (ShowComment) = ShowComment($event)
+        [class.child-comment] = "comment.IsChild"
+    ></app-comment>
+</ng-container>
