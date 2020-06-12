@@ -15,8 +15,11 @@ import { SelectOptionComponent } from './select-option/select-option.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
-
-
+import { ProductComponent } from './product/product.component';
+import { ProductImgComponent } from './product-img/product-img.component';
+import { BtnPrevComponent } from './btn-prev/btn-prev.component';
+import { BtnNextComponent } from './btn-next/btn-next.component';
+import { SlideAddComponent } from './slide-add/slide-add.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,12 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     PaginationComponent,
     CommentComponent,
     CommentListComponent,
+    ProductComponent,
+    ProductImgComponent,
+    BtnPrevComponent,
+    BtnNextComponent,
+    SlideAddComponent 
+
     
   ],
   imports: [

@@ -1,0 +1,15 @@
+:host{
+    display: block;
+}
+
+:host ol.carousel-indicators{
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+:host ol.carousel-indicators li{
+    display: inline-block;
+    margin: 0 5px;
+    width: calc((100% - 40px) / 4);
+}

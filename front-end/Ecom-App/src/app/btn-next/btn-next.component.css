@@ -1,0 +1,39 @@
+:host{
+    display: inline-block;
+    cursor: pointer;
+
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+div.btn-control{
+    display: inline-block;
+    padding: 20px 21px 20px 4px;
+    border-radius: 5px;
+    background: rgba(0,0,0,.4);
+}
+
+div.btn-control:hover{
+    background: rgba(0,0,0,.7);   
+    transition: .3s all;
+}
+
+div.next{
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    border-top: 4px solid rgba(255, 255, 255, .5);
+    border-right: 4px solid rgba(255, 255, 255, .5);
+    border-left: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    background: transparent;
+    transform: rotateZ(45deg);
+    transition: .3s all;
+}
+
+div.btn-control:hover div.next{
+    border-top-color: #fff;
+    border-right-color: #fff;
+}

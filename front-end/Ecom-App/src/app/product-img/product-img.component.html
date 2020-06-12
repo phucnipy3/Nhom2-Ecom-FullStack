@@ -1,0 +1,24 @@
+<div class="ms-panel shadow-none">
+    <div class="ms-panel-body pb-0">
+        <div id="imagesSlider" class="ms-image-slider carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <ng-container *ngFor="let img of lstImage; let i = index">
+                    <div class="carousel-item" [class.active] = "i == indexActive">
+                        <img class="d-block w-100" src="{{img}}"  alt="First slide">
+                    </div>
+                </ng-container>
+            </div>
+
+            <app-btn-prev (click)="prevActiveImage()"></app-btn-prev>
+            <app-btn-next (click)="nextActiveImage()"></app-btn-next>
+
+            <ol class="carousel-indicators">
+                <ng-container *ngFor="let img of lstImage; let i = index">
+                    <li class="slide-item" (click) = "SelectImg(i)" [class.active] = "i == indexActive"> 
+                        <img class="d-block w-100" src="{{img}}" alt="First slide">
+                    </li>
+                </ng-container>
+            </ol>
+        </div>
+    </div>
+</div>

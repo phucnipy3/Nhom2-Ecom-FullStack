@@ -1,0 +1,166 @@
+
+
+<div class="row ">
+
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb pl-0">
+                <li class="breadcrumb-item"><a href="#"><i class="material-icons">home</i> Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Product</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="col-xl-6 col-md-12 bg-white">
+        <app-product-img></app-product-img>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="progress-rounded progress-round-tiny">
+                    <div class="progress-value">Return 12%</div>
+                    <svg>
+                        <circle class="progress-cicle bg-primary" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="12" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider"></circle>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="progress-rounded progress-round-tiny">
+                    <div class="progress-value">Favourite 38.8%</div>
+                    <svg><circle class="progress-cicle bg-dark" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="38.8" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider"></circle></svg>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="progress-rounded progress-round-tiny last-circle">
+                    <div class="progress-value">Sales 100%</div>
+                    <svg><circle class="progress-cicle bg-primary" cx="65" cy="65" r="57" stroke-width="4" fill="none" aria-valuenow="100" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" role="slider"></circle></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6 col-md-12  bg-white">
+        <div class="ms-panel shadow-none ms-panel-fh">
+            <div class="ms-panel-body pb-0">
+
+                <h3>Product Details</h3>
+                <p>{{productDesc}}</p>
+                <table class="table ms-profile-information">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Id</th>
+                            <td>{{productId}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Product Name</th>
+                            <td>{{productTitle}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Product Size</th>
+                            <td>{{productSize}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Price</th>
+                            <td>${{productPrice}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Product Color</th>
+                            <td>{{ productColor}}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Status</th>
+                            <td><span class="badge badge-primary">In Stock</span></td>
+                        </tr>
+
+                        
+
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <button class="btn btn-primary mr-3  ms-graph-metrics">Edit</button>
+
+                <button class="btn btn-dark ms-graph-metrics mr-3">Delete</button>
+                <button class="btn btn-primary  ms-graph-metrics">View Client</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-12">
+        <div class="ms-panel ms-panel-fh">
+            <div class="ms-panel-header">
+                <!-- <h6>Tabs Bordered</h6> -->
+            </div>
+            <div class="ms-panel-body">
+                
+                <ul class="nav nav-tabs tabs-bordered d-flex nav-justified mb-4" role="tablist">
+                    <li role="presentation">
+                        <a href="#description" aria-controls="description" class="active show" role="tab" data-toggle="tab"> Description </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#lst-comment" aria-controls="lst-comment" role="tab" data-toggle="tab"> List Comments </a>
+                    </li>
+                    <li role="presentation"><a href="#save-change" aria-controls="save-change" role="tab" data-toggle="tab"> Change History </a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active show fade in" id="description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, neque est. Quaerat nihil perspiciatis ea incidunt aliquid nemo atque minima aliquam quod temporibus, beatae voluptas, totam ex corporis est quasi odit nesciunt, quas consectetur sunt alias, suscipit? Dolore voluptatum praesentium, iste totam beatae corporis autem expedita quaerat adipisci. Ex, dolorum.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magni quia earum error! Consequuntur, molestiae eaque? Dolorem labore laborum, exercitationem, voluptatibus obcaecati, aspernatur expedita aliquam earum aliquid neque quae quod necessitatibus tempore perspiciatis nam. Architecto eum, deleniti, harum provident ea officiis, aliquid consectetur nostrum ab at vero laudantium! Modi qui quod quae, eum sapiente molestiae tempore voluptate quibusdam, libero asperiores explicabo officiis minima harum deserunt. Ducimus necessitatibus, illum cum obcaecati voluptates at maiores accusantium ipsum repudiandae explicabo commodi voluptas quae, tenetur, ad rem! Corporis asperiores eum debitis odio sit aliquam laborum. Illum eveniet quas incidunt facere, odio illo officiis reiciendis.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit tenetur blanditiis in dolorem animi, quo odio facere? Dolores assumenda illo eos quibusdam, ipsam voluptates excepturi a, modi saepe ducimus blanditiis dolor dolorum, perspiciatis sunt voluptas ab corrupti voluptate veritatis odit magni beatae. Harum corrupti ab sapiente debitis autem temporibus dolor enim officiis voluptates vero. Nobis at repellendus officia ex nam, eos laboriosam quod, nemo doloremque? Assumenda nesciunt odit, quo nam dicta, asperiores repudiandae hic. Illo blanditiis neque facilis quas ipsum provident tempora asperiores esse voluptates officiis quia magni optio animi inventore voluptate reprehenderit reiciendis id, quae explicabo recusandae culpa beatae harum. Nemo ea vitae necessitatibus animi aperiam pariatur facilis cum, libero, debitis praesentium voluptates sequi reiciendis. Autem praesentium ratione deserunt reprehenderit reiciendis non atque ex soluta cum voluptatum quibusdam, officiis minima voluptatibus perspiciatis magnam at modi, nesciunt neque, pariatur culpa quos. Accusantium quasi labore, voluptatibus mollitia, similique reiciendis. Quidem molestias voluptas possimus saepe distinctio, voluptate sint, facere soluta quas aspernatur dolore quod nihil, enim atque fuga asperiores impedit molestiae nostrum. Minima inventore labore dolorum consectetur, doloremque beatae totam molestiae officiis minus ut quae placeat iusto veniam quidem dolores fugiat eum eveniet autem optio delectus perferendis magnam voluptatum cumque. Officia, maiores?</p>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="lst-comment">
+                        <div id="comments-container"></div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane fade" id="save-change">
+                       <div class="ms-panel">
+                            <div class="ms-panel-body">
+                                <div class="table-responsive">
+                                    <table id="data-change-product" class="table table-striped thead-primary w-100">
+                                        <tbody>
+                                            <tr>
+                                                <td>SCP1</td>
+                                                <td>Trần Vũ</td>
+                                                <td>05/29/2015 5:50</td>
+                                                <td>
+                                                    <button type="button" name="button" class="btn-transparent trigger-swal" data-swal="custom"><i class='fas fa-pencil-alt ms-text-danger ml-3'></i></button>
+                                                    <button type="button" name="button" class="btn-transparent trigger-swal" data-swal="multi-step"><i class='fa fa-reply ms-text-danger ml-3'></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>SCP2</td>
+                                                <td>Trần Vũ</td>
+                                                <td>05/29/2015 5:50</td>
+                                                <td>
+                                                    <button type="button" name="button" class="btn-transparent trigger-swal" data-swal="custom"><i class='fas fa-pencil-alt ms-text-danger ml-3'></i></button>
+                                                    <button type="button" name="button" class="btn-transparent trigger-swal" data-swal="multi-step"><i class='fa fa-reply ms-text-danger ml-3'></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>SCP3</td>
+                                                <td>Trần Vũ</td>
+                                                <td>05/29/2015 5:50</td>
+                                                <td>
+                                                    <button type="button" name="button" class="btn-transparent trigger-swal" data-swal="custom"><i class='fas fa-pencil-alt ms-text-danger ml-3'></i></button>
+                                                    <button type="button" name="button" class="btn-transparent trigger-swal" data-swal="multi-step"><i class='fa fa-reply ms-text-danger ml-3'></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

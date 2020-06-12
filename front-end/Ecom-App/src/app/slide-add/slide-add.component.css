@@ -1,0 +1,14 @@
+.carousel-inner{
+    position: relative;
+}
+
+.carousel-indicator{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 0; 
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
