@@ -33,13 +33,13 @@ export class ProductImgComponent implements OnInit {
       this.indexActive = this.slideImage - 1;
     }
     
-    // if(this.indexActive >= 4 && this.indexActive < this.slideImage){
-    //   var widthSlide = $('ol.carousel-indicators li').width();
-    //   var posFirstSlide = -(widthSlide + 10) * (this.indexActive - 3) + 5;
-    //   $('ol.carousel-indicators li').eq(0).css('margin-left', posFirstSlide);
-    // }else if (this.indexActive < 4){
-    //   $('ol.carousel-indicators li').eq(0).css('margin-left', 5);
-    // }
+    if(this.indexActive >= 4 && this.indexActive < this.slideImage){
+      var widthSlide = $('ol.carousel-indicators li').width();
+      var posFirstSlide = -(widthSlide + 10) * (this.indexActive - 3) + 5;
+      $('ol.carousel-indicators li').eq(0).css('margin-left', posFirstSlide);
+    }else if (this.indexActive < 4){
+      $('ol.carousel-indicators li').eq(0).css('margin-left', 5);
+    }
   }
 
   nextActiveImage(){
@@ -49,13 +49,13 @@ export class ProductImgComponent implements OnInit {
       this.indexActive = 0;
     }
 
-    // if(this.indexActive >= 4 && this.indexActive < this.slideImage){
-    //   var widthSlide = $('ol.carousel-indicators li').width();
-    //   var posFirstSlide = -(widthSlide + 10) * (this.indexActive - 3) + 5;
-    //   $('ol.carousel-indicators li').eq(0).css('margin-left', posFirstSlide);
-    // }else{
-    //   $('ol.carousel-indicators li').eq(0).css('margin-left', 5);
-    // }
+    if(this.indexActive >= 4 && this.indexActive < this.slideImage){
+      var widthSlide = $('ol.carousel-indicators li').width();
+      var posFirstSlide = -(widthSlide + 10) * (this.indexActive - 3) + 5;
+      $('ol.carousel-indicators li').eq(0).css('margin-left', posFirstSlide);
+    }else{
+      $('ol.carousel-indicators li').eq(0).css('margin-left', 5);
+    }
 
     // $('ol.carousel-indicators li:nth-of-type(0)').css('margin-left', '100px');
   }
